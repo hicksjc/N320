@@ -4,7 +4,7 @@ class Rain {
         this.y = rainY;
         this.radius = rainRadius;
         this.color = rainColor;
-        this.speed = 10 + Math.random() * 4;
+        this.speed = .2 + Math.random() * 1;
     }
 
     update() {
@@ -25,7 +25,6 @@ class Rain {
             img.updatePixels()
 
         }
-        
     }
 }
 
@@ -107,17 +106,16 @@ function setup(){
 function draw() {
     background(128,128,128);
 
-    
-    //load the pixels
-    img.loadPixels();
-    
     for(var i=0; i < myRain.length; i++){
         myRain[i].update();
     }
 
-    image(img, 0, 200);
-
+    //load the pixels of the image
+    img.loadPixels();
     
+    
+
+    image(img, 0, 200);
 
     // myImage.changePixels();
 }
