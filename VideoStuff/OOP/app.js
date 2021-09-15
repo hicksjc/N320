@@ -1,4 +1,5 @@
 //Inheritance Example
+//Inheritance is when one object relates to another, FullNote is a Note, HalfNote is a Note, Dog is an Animal. The ability to base a class off of another class.
 class Note {
     constructor(pitch, duration){
         this.pitch = pitch;
@@ -60,6 +61,7 @@ class Engine{
         return this.oil;
     }
 }
+
 
 //Polymorphism Example
 //based off of inheritance 
