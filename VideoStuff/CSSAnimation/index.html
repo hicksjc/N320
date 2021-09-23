@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Title</title>
+ <link rel="stylesheet" href="css/styles.css">
+ <style>
+     body{
+         background: #453d54;
+     }
+     .status button{
+         background-color: #aa80ff;
+         border-radius: 10px;
+         color: #fff;
+     }
+     .status textarea{
+         border: 1px solid #999;
+         border-radius: 10px;
+         width: 23em;
+         height: 1em;
+     }
+
+     .selected{
+         animation-name: selectedAnim;
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+     }
+     .deselected{
+         animation-name: selectedAnim;
+         animation-duration: 1s;
+         animation-direction: reverse;
+         animation-fill-mode: forwards;
+     }
+     @keyframes selectedAnim{
+         /* 0% {}
+            10%{}
+            99% {}
+            100% {} */
+        /* from = 0% 
+            to = 100% */
+         from { height: 1em; background-color: #fff;}
+         to { height: 3em; background-color: #ffcfe4;;}
+     }
+ </style>
+ </head>
+ <body>
+
+    <div class="status">
+        <textarea id="txtStatinput"
+            onfocus="textFocus()"
+            onblur="textLeave()"></textarea>
+        <button>Submit</button>
+    </div>
+
+
+    <script src="app.js"></script>
+ </body>
+</html>

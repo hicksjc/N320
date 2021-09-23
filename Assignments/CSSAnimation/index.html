@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title {
+            color: #00063d;
+            padding: 3px;
+        }
+        .rectangle{
+            background-color: #00063d;
+            width: 100%;
+            height: 100px;
+        }
+        .nine-boxes{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .cell{
+            margin-top: 25px;
+            background-color: #7500b9;
+            height: 100px;
+            width: 500px;
+        }
+        .selected {
+            animation-name: selectedAnim;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        .deselected{
+            animation-name: selectedAnim;
+            animation-duration: 1s;
+            animation-direction: reverse;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes selectedAnim{
+            from{height: 100px;
+                width: 500px;
+            background-color: #7500b9;}
+            to{
+                height: 150px;
+                width: 525px;
+                background-color: #6e64b9;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 class="title">Title</h2>
+
+    <div class="rectangle"></div>
+
+
+    <div class="nine-boxes">
+        <div class="cell" onmouseover="boxFocus()" onmouseout="boxunFocus()"></div>
+        <div class="cell" onmouseover="boxFocus()" onmouseout="boxunFocus()"></div>
+        <div class="cell" onmouseover="boxFocus()" onmouseout="boxunFocus()"></div>
+        <div class="cell" onmouseover="boxFocus()" onmouseout="boxunFocus()"></div>
+        <div class="cell" onmouseover="boxFocus()" onmouseout="boxunFocus()"></div>
+        <div class="cell" onmouseover="boxFocus()" onmouseout="boxunFocus()"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="app/app.js"></script>
+</body>
+</html>
