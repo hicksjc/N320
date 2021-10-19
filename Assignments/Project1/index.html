@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .selected{
+            animation-name: selectedAnim;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        .selectedGreen{
+            animation-name: selectedAnimGrn;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes selectedAnim{
+            from{fill: "";}
+            to{fill: #0000ff;}
+        }
+        @keyframes selectedAnimGrn{
+            from{fill: "";}
+            to{fill: #00ff00;}
+        }
+    </style>
+</head>
+<body>
+
+    <svg id="gameZone" width=600 height=600>
+        <rect data-x="0" data-y="0" y=120 x=50 class="cell" height=100 width=100 data-color1="1" data-color2="0"></rect>
+        <rect data-x="0" data-y="1" y=120 x=190 class="cell" height=100 width=100 data-color1="1" data-color2="0"></rect>
+        <rect data-x="0" data-y="2" y=120 x=320 class="cell" height=100 width=100 data-color1="1" data-color2="0"></rect>
+        <rect data-x="1" data-y="0" y=230 x=50 class="cell" height=100 width=100 data-color1="1" data-color2="0"></rect>
+        <rect data-x="1" data-y="1" y=230 x=190 class="cell" height=100 width=100 data-color1="1" data-color2="0"></rect>
+        <rect data-x="1" data-y="2" y=230 x=320 class="cell" height=100 width=100 data-color1="1" data-color2="0"></rect>
+        <rect data-x="2" data-y="0" y=340 x=50 class="cell" height=100 width=100 data-color1="1" data-color2="0"></rect>
+        <rect data-x="2" data-y="1" y=340 x=190 class="cell" height=100 width=100 data-color1="1" data-color2="0"></rect>
+        <rect data-x="2" data-y="2" y=340 x=320 class="cell" height=100 width=100 data-color1="1" data-color2="0"></rect>
+    </svg>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="app/app.js"></script>
+</body>
+</html>
